@@ -8,3 +8,9 @@ for(const income of incomes){
 }
 
 console.log('Total: ', total);
+
+// Example 2
+let fullName = 'Mehdi Aitbrahim';
+for(const chr of fullName){
+  console.log(chr);
+}
