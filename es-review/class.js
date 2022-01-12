@@ -3,5 +3,9 @@ export class Animal{
     this.type = type;
     this.legs = legs;
   }
+
+  makeNoise(sound='Loud Noise'){
+    console.log(sound);
+  }
 }
 
