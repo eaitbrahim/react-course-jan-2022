@@ -7,5 +7,9 @@ export class Animal{
   makeNoise(sound='Loud Noise'){
     console.log(sound);
   }
+
+  static returnTen(){
+    return 10;
+  }
 }
 

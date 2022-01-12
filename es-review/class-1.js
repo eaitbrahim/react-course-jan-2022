@@ -6,3 +6,5 @@ console.log(cat.type);
 console.log(cat.legs);
 
 cat.makeNoise('Mew');
+
+console.log(Animal.returnTen());
