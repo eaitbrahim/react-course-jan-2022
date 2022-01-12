@@ -11,5 +11,9 @@ export class Animal{
   static returnTen(){
     return 10;
   }
+
+  get metaData(){
+    return `This animal of type: ${this.type}, and it has ${this.legs} legs.`;
+  }
 }
 

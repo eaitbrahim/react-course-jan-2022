@@ -8,3 +8,5 @@ console.log(cat.legs);
 cat.makeNoise('Mew');
 
 console.log(Animal.returnTen());
+
+console.log(cat.metaData);
