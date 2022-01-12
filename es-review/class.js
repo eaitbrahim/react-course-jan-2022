@@ -17,3 +17,14 @@ export class Animal{
   }
 }
 
+export class Dog extends Animal{
+  constructor(type, legs, tail){
+    super(type, legs);
+    this.tail = tail;
+  }
+
+  makeNoise(sound='Bark'){
+    console.log(sound);
+  }
+}
+
