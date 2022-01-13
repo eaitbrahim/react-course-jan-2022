@@ -9,7 +9,8 @@ function getPosts(){
 
   // Use axios
   axios.get(apiUrl)
-      .then(response => console.log('response using axios: ', response.data));
+      .then(response => console.log('response using axios: ', response.data))
+      .catch( error => console.log('Error: ', error));
 }
 
 getPosts();
