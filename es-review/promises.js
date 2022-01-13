@@ -12,5 +12,12 @@ function getPosts(){
       .then(response => console.log('response using axios: ', response.data))
       .catch( error => console.log('Error: ', error));
 }
-
 getPosts();
+
+async function getPostsAsync(){
+  const response = await axios.get(apiUrl);
+  console.log('Results using async await:', response.data[0]);
+}
+
+
+getPostsAsync()
