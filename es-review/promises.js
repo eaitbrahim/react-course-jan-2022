@@ -15,8 +15,12 @@ function getPosts(){
 getPosts();
 
 async function getPostsAsync(){
-  const response = await axios.get(apiUrl);
-  console.log('Results using async await:', response.data[0]);
+  try{
+    const response = await axios.get(apiUrl);
+    console.log('Results using async await:', response.data[0]);
+  }catch(error){
+    console.log('failed: ', error);
+  }
 }
 
 
