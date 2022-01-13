@@ -1,1 +1,6 @@
-{ "type": "module" }
+{
+  "type": "module",
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}
