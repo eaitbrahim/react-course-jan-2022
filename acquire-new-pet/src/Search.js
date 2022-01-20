@@ -44,6 +44,7 @@ const Search = () => {
           breeds
           <select
             id="breed"
+            disabled={!breeds.length}
             value={breed}
             onChange={(e) => setBreed(e.target.value)}
             onBlur={(e) => setBreed(e.target.value)}
