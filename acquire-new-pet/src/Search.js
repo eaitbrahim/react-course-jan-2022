@@ -5,6 +5,8 @@ const Search = () => {
 
   const [location, setLocation] = useState("Toledo, OH");
   const [animal, setAnimal] = useState("");
+  const [breed, setBreed] = useState("");
+  const breeds = [];
 
   console.log("Animal: ", animal);
 
@@ -38,6 +40,22 @@ const Search = () => {
           </select>
         </label>
 
+        <label htmlFor="breed">
+          breeds
+          <select
+            id="breed"
+            value={breed}
+            onChange={(e) => setBreed(e.target.value)}
+            onBlur={(e) => setBreed(e.target.value)}
+          >
+            <option />
+            {breeds.map((breed) => (
+              <option key={breed} value={breed}>
+                {breed}
+              </option>
+            ))}
+          </select>
+        </label>
         <button>Submit</button>
       </form>
     </div>
