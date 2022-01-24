@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./search.css";
 
 const Search = () => {
   const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
@@ -22,8 +23,8 @@ const Search = () => {
   }
 
   return (
-    <div>
-      <form>
+    <div className="container">
+      <form className="searchCriteria">
         <label htmlFor="location">
           location
           <input
@@ -71,14 +72,18 @@ const Search = () => {
         <button>Submit</button>
       </form>
 
-      {pets.map((pet) => (
-        <Pet
-          name={pet.name}
-          animal={pet.animal}
-          breed={pet.breed}
-          key={pet.id}
-        />
-      ))}
+      {pets.length == 0 ? (
+        <p>No results!</p>
+      ) : (
+        pets.map((pet) => (
+          <Pet
+            name={pet.name}
+            animal={pet.animal}
+            breed={pet.breed}
+            key={pet.id}
+          />
+        ))
+      )}
     </div>
   );
 };
