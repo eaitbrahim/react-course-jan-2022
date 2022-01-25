@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
+const localCache = {};
 
 export default function useBreedList(pet) {
   const [breedList, setBreedList] = useState([]);
   const [status, setStatus] = useState("unloaded");
-  const localCache = {};
 
   useEffect(() => {
     if (!pet) {

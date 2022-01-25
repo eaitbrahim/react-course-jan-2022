@@ -1,4 +1,6 @@
 const Pet = (props) => {
+  const { name, anmal, breed, images, location, id } = props;
+
   return (
     <div>
       <h1>{props.name}</h1>
