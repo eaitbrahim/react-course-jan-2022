@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import useBreedList from "./useBreedList";
+import Pet from "./Pet";
 import "./search.css";
 
 const Search = () => {
@@ -25,7 +26,13 @@ const Search = () => {
 
   return (
     <div className="container">
-      <form className="searchCriteria">
+      <form
+        className="searchCriteria"
+        onSubmit={(e) => {
+          e.preventDefault();
+          requestPets();
+        }}
+      >
         <label htmlFor="location">
           location
           <input
