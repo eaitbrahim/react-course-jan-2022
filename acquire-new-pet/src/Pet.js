@@ -1,12 +1,21 @@
 const Pet = (props) => {
-  const { name, anmal, breed, images, location, id } = props;
+  const { name, animal, breed, images, location, id } = props;
+  let defaultImg = "http://pets-images.dev-apis.com/pets/none.jpg";
+
+  if (images.length) {
+    defaultImg = images[0];
+  }
 
   return (
-    <div>
-      <h1>{props.name}</h1>
-      <h2>{props.animal}</h2>
-      <h2>{props.breed}</h2>
-    </div>
+    <a href={`/details/${id}`}>
+      <div>
+        <img src={defaultImg} alt={name} />
+      </div>
+      <div>
+        <h1>{name}</h1>
+        <h2>{`${animal} - ${breed} - ${location}`}</h2>
+      </div>
+    </a>
   );
 };
 
